@@ -1,5 +1,4 @@
 #include "sort.h"
-#include <stdio.h>
 
 /**
  * swap - Function to swap two integers
@@ -23,6 +22,9 @@ void swap(int a, int b)
 void bubble_sort(int *array, size_t size)
 {
 	size_t i;
+
+	if (array == NULL || size < 2)
+		return;
 
 	for (i = 0; i < size - 1; i++)
 	{
